@@ -2,12 +2,17 @@ import './App.css';
 import styled from 'styled-components';
 import Nav from './components/Nav';
 import Banner from './components/Banner';
+import Category from './components/Category';
+import requests from './api/request';
+import Row from './components/Row';
 
 function App() {
   return (
     <Container>
       <Nav />
       <Banner />
+      <Category />
+      <Row title="Trending Now" id="TN" fetchUrl={requests.fetchTrending} />
     </Container>
   );
 }
